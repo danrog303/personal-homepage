@@ -10,7 +10,7 @@ const contactItems = [
     {
         name: "E-mail",
         icon: <FaEnvelope />,
-        value: <p>{emailAddress}</p>
+        value: <p><a href={`mailto:${emailAddress}`}>{emailAddress}</a></p>
     },
     {
         name: "Phone number",
