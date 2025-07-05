@@ -1,0 +1,20 @@
+.workExperienceCard {
+    background: white;
+    border: 1px solid #eee;
+    margin-top: 1em;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.companyName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.companyName img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin-right: 0.5em;
+}

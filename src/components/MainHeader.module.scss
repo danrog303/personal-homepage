@@ -1,0 +1,79 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    padding: 5em 0;
+    background: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 5px 8px -5px rgba(0, 0, 0, 0.08);
+    line-height: 1.7;
+
+    a {
+        margin-top: 1em;
+        display: block;
+        color: inherit;
+        font-weight: 800;
+    }
+
+    img {
+        height: 20em;
+        border-radius: 50px 50px;
+        box-shadow: 0 5px 8px -5px rgba(0, 0, 0, 0.08);
+
+        @media (max-width: 768px) {
+            height: 15em;
+        }
+    }
+
+    @media (max-width: 1250px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 3em;
+        margin-top: 0;
+        padding-bottom: 3em;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.headerParagraphs {
+    @media (max-width: 768px) {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        p {
+            display: inline;
+        }
+
+        p::after {
+            content: " ";
+        }
+    }
+}
+
+.headerContactLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    color: inherit;
+
+    @media (max-width: 1250px) {
+        margin-top: 2em;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 2em;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}

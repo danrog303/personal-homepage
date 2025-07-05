@@ -1,0 +1,20 @@
+.universityName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.universityName img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin-right: 0.5em;
+}
+
+.universityCard {
+    border: 1px solid #eee;
+    margin-top: 1em;
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+}
