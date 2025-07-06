@@ -9,7 +9,7 @@ export default function MainFooter() {
                 |
                 Daniel Rogowski
                 |
-                Color scheme inspired by
+                Color scheme inspired by {" "}
                 <a href={"https://www.adhamdannaway.com/"}>Adham Dannaway</a>'s website.
             </p>
         </footer>
