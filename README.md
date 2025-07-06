@@ -1,4 +1,6 @@
 # personal-homepage
+[![Deploy to Cloudflare](https://github.com/danrog303/personal-homepage/actions/workflows/deploy.yaml/badge.svg)](https://github.com/danrog303/personal-homepage/actions/workflows/deploy.yaml)
+![GitHub last commit](https://img.shields.io/github/last-commit/danrog303/personal-homepage)
 > 🧑‍💻 Personal home page of Daniel Rogowski.
 
 ## 🪐 Checkout live version
