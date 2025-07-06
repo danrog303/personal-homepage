@@ -14,36 +14,26 @@ export default function MainNavbar() {
 
             <nav className={styles.topBarNav}>
                 <ul>
-                    <a href="#private-projects">
-                        <li>Project portfolio</li>
-                    </a>
-                    <a href="#work-experience">
-                        <li>Work experience</li>
-                    </a>
-                    <a href="#education">
-                        <li>Education</li>
-                    </a>
-                    <a href="#technologies">
-                        <li>Technologies</li>
-                    </a>
-                    <a href="#contact">
-                        <li>Contact</li>
-                    </a>
+                    <li><a href="#private-projects">Project portfolio</a></li>
+                    <li><a href="#work-experience">Work </a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#technologies">Technologies</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
             <nav className={styles.topBarSocial}>
-            <ul>
-                    <a href={linkedInUrl} target="_blank" rel="noreferrer">
-                        <li>
+                <ul>
+                    <li>
+                        <a href={linkedInUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn link">
                             <FaLinkedin size={32}/>
-                        </li>
-                    </a>
-                    <a href={githubUrl} target="_blank" rel="noreferrer">
-                        <li>
+                        </a>
+                    </li>
+                    <li>
+                        <a href={githubUrl} target="_blank" rel="noreferrer" aria-label="Github link">
                             <FaGithub size={32}/>
-                        </li>
-                    </a>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>

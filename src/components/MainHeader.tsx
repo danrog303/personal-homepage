@@ -7,7 +7,7 @@ export default function MainHeader() {
     return <>
         <header className={styles.header}>
             <div>
-                <img src={programmingImage} alt={"Programming illustration"}/>
+                <img src={programmingImage} alt={"Programming illustration"} fetchPriority="high" />
             </div>
 
             <div>

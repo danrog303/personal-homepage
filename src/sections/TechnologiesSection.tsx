@@ -117,7 +117,7 @@ export default function TechnologiesSection() {
                     <div className={styles.technologyItems}>
                         {technologyCategoryItem.items.map(technologyItem => (
                             <div className={styles.technologyItem} key={technologyItem.name}>
-                                <img src={technologyItem.image} alt={`${technologyItem.name} logo`}/>
+                                <img src={technologyItem.image} alt={`${technologyItem.name} logo`} loading="lazy" fetchPriority="low" />
                                 {technologyItem.name}
                             </div>
                         ))}
