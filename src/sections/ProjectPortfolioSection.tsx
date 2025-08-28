@@ -48,9 +48,9 @@ const projectPortfolioItems = [
         links: [
             {
                 class: styles.btnPlayStore,
-                url: "https://play.google.com",
+                url: "https://play.google.com/store/apps/details?id=com.github.danrog303.partygames.free",
                 icon: <FaGooglePlay/>,
-                text: "Available soon...",
+                text: "Android Play Store",
             },
             {
                 class: styles.btnGithub,
@@ -119,13 +119,13 @@ const projectPortfolioItems = [
         ]
     },
     {
-        name: "Mayan Calculator",
+        name: "Maya Calculator",
         description: "Calculator for converting between arabic and mayan numerical system.",
         tags: ["html", "css", "javascript"],
         links: [
             {
                 class: styles.btnBrowser,
-                url: "https://danrog303.github.io/mayan-calculator",
+                url: "https://mayacalc.danielrogowski.net/",
                 icon: <FaLink/>,
                 text: "View live"
             },
