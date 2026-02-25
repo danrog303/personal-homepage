@@ -26,7 +26,7 @@ function getLinkClass(type: ProjectLink['type']) {
 
 export default function ProjectPortfolioSection() {
     return <>
-        <section id="privateProjects">
+        <section id="private-projects">
             <h2>Portfolio of projects</h2>
 
             <div className={styles.privateProjectsContainer}>

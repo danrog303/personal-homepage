@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from '@dr.pogodin/react-helmet';
 import { FaChrome, FaDownload, FaGithub, FaGooglePlay, FaLink, FaArrowLeft } from 'react-icons/fa';
 import { projectPortfolioItems, ProjectLink } from '../data/projectPortfolioData';
 import styles from './ProjectPage.module.scss';
@@ -32,14 +33,14 @@ export default function ProjectPage() {
         return (
             <div className={styles.page}>
                 <nav className={styles.topBar}>
-                    <Link to="/#privateProjects" className={styles.backLink}>
+                    <Link to="/#private-projects" className={styles.backLink}>
                         <FaArrowLeft /> Back to portfolio
                     </Link>
                 </nav>
                 <div className={styles.content}>
                     <h1 className={styles.notFound}>Project not found</h1>
                     <p className={styles.notFoundDesc}>No project with slug "{slug}" exists.</p>
-                    <Link to="/#privateProjects" className={`${styles.btn} ${styles.btnBrowser}`}>
+                    <Link to="/#private-projects" className={`${styles.btn} ${styles.btnBrowser}`}>
                         <FaArrowLeft /> <span>Go back to portfolio</span>
                     </Link>
                 </div>
@@ -47,12 +48,19 @@ export default function ProjectPage() {
         );
     }
 
+    const metaDescription = (project.fullDescription || project.description).slice(0, 155);
+
     return (
         <div className={styles.page}>
+            <Helmet>
+                <title>{project.name} | Daniel Rogowski</title>
+                <meta name="description" content={metaDescription} />
+                <link rel="canonical" href={`${process.env.REACT_APP_SITE_URL}/projects/${project.slug}/`} />
+            </Helmet>
             <nav className={styles.topBar}>
-                <a href="/#privateProjects" className={styles.backLink}>
+                <Link to="/#private-projects" className={styles.backLink}>
                     <FaArrowLeft /> Back to portfolio
-                </a>
+                </Link>
             </nav>
             <main className={styles.content}>
                 <h1 className={styles.projectTitle}>{project.name}</h1>

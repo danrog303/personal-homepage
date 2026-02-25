@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from '@dr.pogodin/react-helmet';
 import '../App.css';
 import {CookieConsent} from "react-cookie-consent";
 import MainFooter from "../components/MainFooter";
@@ -12,6 +13,11 @@ import WorkExperienceSection from "../sections/WorkExperienceSection";
 
 export default function HomePage() {
     return <div id="home">
+        <Helmet>
+            <title>Daniel Rogowski | Cloud &amp; Backend Developer</title>
+            <meta name="description" content="Portfolio of Daniel Rogowski — Cloud &amp; Backend Developer specialising in Java, Spring Boot, AWS, TypeScript, and React. View projects, work experience, and contact info." />
+            <link rel="canonical" href={`${process.env.REACT_APP_SITE_URL}/`} />
+        </Helmet>
         <div className="heroWrapper">
             <MainNavbar />
             <MainHeader />

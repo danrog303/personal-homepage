@@ -9,7 +9,7 @@ export default function MainNavbar() {
     return <>
         <div className={styles.topBar}>
             <div className={styles.topBarBrand}>
-                <h1>Daniel Rogowski - Portfolio</h1>
+                <span>Daniel Rogowski - Portfolio</span>
             </div>
 
             <nav className={styles.topBarNav}>
