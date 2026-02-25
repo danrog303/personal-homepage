@@ -1,0 +1,84 @@
+.page {
+    min-height: 100vh;
+    background: #f8f9ff;
+}
+
+.topBar {
+    background: #0f172a;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+}
+
+.backLink {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: color 0.2s;
+
+    &:hover {
+        color: #818cf8;
+    }
+}
+
+.content {
+    max-width: 800px;
+    width: 88%;
+    margin: 3em auto 6em;
+
+    @media (max-width: 768px) {
+        margin: 2em auto 4em;
+    }
+
+    section {
+        max-width: none;
+        width: auto;
+        margin: 0 0 1.1em;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin: 0 0 0.5em;
+    }
+
+    p {
+        font-size: 0.97rem;
+        color: #334155;
+        line-height: 1.75;
+        margin: 0;
+    }
+
+    a {
+        color: #4f46e5;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.2em;
+
+    @media (max-width: 768px) {
+        font-size: 1.75rem;
+    }
+}
+
+.updated {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin: 0;
+    padding-bottom: 2em;
+}

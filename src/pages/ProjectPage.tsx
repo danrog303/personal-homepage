@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { FaChrome, FaDownload, FaGithub, FaGooglePlay, FaLink, FaArrowLeft } from 'react-icons/fa';
 import { projectPortfolioItems, ProjectLink } from '../data/projectPortfolioData';
 import styles from './ProjectPage.module.scss';
@@ -32,16 +32,16 @@ export default function ProjectPage() {
         return (
             <div className={styles.page}>
                 <nav className={styles.topBar}>
-                    <a href="/#privateProjects" className={styles.backLink}>
+                    <Link to="/#privateProjects" className={styles.backLink}>
                         <FaArrowLeft /> Back to portfolio
-                    </a>
+                    </Link>
                 </nav>
                 <div className={styles.content}>
                     <h1 className={styles.notFound}>Project not found</h1>
                     <p className={styles.notFoundDesc}>No project with slug "{slug}" exists.</p>
-                    <a href="/#privateProjects" className={`${styles.btn} ${styles.btnBrowser}`}>
+                    <Link to="/#privateProjects" className={`${styles.btn} ${styles.btnBrowser}`}>
                         <FaArrowLeft /> <span>Go back to portfolio</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         );
