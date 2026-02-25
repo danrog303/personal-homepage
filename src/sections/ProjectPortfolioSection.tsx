@@ -62,7 +62,7 @@ const projectPortfolioItems = [
     },
     {
         name: "Ebook Wizard",
-        description: "My engineering thesis! Network drive for e-book creation onf management.",
+        description: "My engineering thesis! Network drive for e-book creation and management.",
         tags: ["java", "spring boot", "aws", "mongodb", "angular"],
         links: [
             {
@@ -156,7 +156,7 @@ export default function ProjectPortfolioSection() {
         <section id="privateProjects">
             <h2>Portfolio of projects</h2>
 
-            <div className={`${styles.privateProjectCard} ${styles.privateProjectsContainer}`}>
+            <div className={styles.privateProjectsContainer}>
                 {projectPortfolioItems.map(portfolioItem => <div className={styles.privateProject} key={portfolioItem.name.toString()}>
                     <h3>{portfolioItem.name}</h3>
                     <p>{portfolioItem.description}</p>

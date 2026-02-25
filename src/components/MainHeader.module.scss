@@ -1,80 +1,138 @@
 .header {
-    display: flex;
-    flex-direction: row;
-    padding-top: 10em;
-    padding-bottom: 6em;
-    background: #fff;
-    justify-content: space-evenly;
+    flex: 1;
+    background: #0f172a;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    box-shadow: 0 5px 8px -5px rgba(0, 0, 0, 0.08);
-    line-height: 1.7;
+    padding: 0 8%;
+    padding-top: 2em;
+    position: relative;
 
-    a {
-        margin-top: 1em;
-        display: block;
-        color: inherit;
-        font-weight: 800;
-    }
-
-    img {
-        height: 20em;
-        border-radius: 50px 50px;
-        box-shadow: 0 5px 8px -5px rgba(0, 0, 0, 0.08);
-
-        @media (max-width: 768px) {
-            height: 15em;
-        }
-    }
 
     @media (max-width: 1250px) {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
         text-align: center;
+        padding-top: 3em;
+        padding-bottom: 6em;
     }
 
     @media (max-width: 768px) {
-        padding-top: 3em;
-        margin-top: 0;
-        padding-bottom: 3em;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 2em 5% 4em;
     }
 }
 
-.headerParagraphs {
+.headerContent {
+    order: 1;
+    z-index: 1;
+
+    h1 {
+        font-size: 5.5rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1.0;
+        background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin: 0.25em 0 0.6em;
+        padding-bottom: 0.1em;
+    }
+
+    @media (max-width: 1250px) {
+        order: 2;
+
+        h1 {
+            font-size: 3.5rem;
+        }
+    }
+
     @media (max-width: 768px) {
-        margin-left: 20px;
-        margin-right: 20px;
-
-        p {
-            display: inline;
+        h1 {
+            font-size: 2.5rem;
         }
+    }
+}
 
-        p::after {
-            content: " ";
-        }
+.headerRole {
+    display: inline-block;
+    background: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-radius: 999px;
+    padding: 0.35em 1em;
+    margin-bottom: 0.75em;
+}
+
+.headerParagraphs {
+    color: #94a3b8;
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin-bottom: 2em;
+    line-height: 1.7;
+
+    @media (max-width: 1250px) {
+        max-width: 100%;
+        margin: 0 auto 2em;
     }
 }
 
 .headerContactLink {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     align-items: center;
-    gap: 0.5em;
-    color: inherit;
+    gap: 0.55em;
+    color: #a5b4fc;
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    border-radius: 999px;
+    padding: 0.7em 1.75em;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    background: rgba(99, 102, 241, 0.08);
+    transition: background 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
 
-    @media (max-width: 1250px) {
-        margin-top: 2em;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+    &:hover {
+        background: rgba(99, 102, 241, 0.16);
+        border-color: rgba(99, 102, 241, 0.65);
+        color: #c7d2fe;
+        box-shadow: 0 0 18px rgba(99, 102, 241, 0.2);
+    }
+}
+
+.headerImageWrapper {
+    order: 2;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 26em;
+        height: 26em;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 65%);
     }
 
-    @media (max-width: 768px) {
-        margin-top: 2em;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+    img {
+        height: 22em;
+        border-radius: 24px;
+        position: relative;
+        z-index: 1;
+
+        @media (max-width: 768px) {
+            height: 14em;
+        }
+    }
+
+    @media (max-width: 1250px) {
+        order: -1;
+        max-width: 600px;
+        margin: 0 auto;
     }
 }

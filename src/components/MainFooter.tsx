@@ -5,12 +5,11 @@ export default function MainFooter() {
     return <>
         <footer className={styles.footer}>
             <p>
-                &copy; 2025
+                &copy; 2026
                 |
                 Daniel Rogowski
                 |
-                Color scheme inspired by {" "}
-                <a href={"https://www.adhamdannaway.com/"}>Adham Dannaway</a>'s website.
+                All rights reserved
             </p>
         </footer>
     </>;

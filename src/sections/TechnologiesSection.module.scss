@@ -1,43 +1,51 @@
 .technologyCard {
     background: white;
-    padding: 2em;
-    border: 1px solid #eee;
-    border-radius: 8px;
+    border-radius: 14px;
+    padding: 2.5em;
     margin-top: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.07);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 2.25em;
+}
+
+.technologyName {
+    color: #6366f1;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 0.75em;
 }
 
 .technologyItems {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    margin: 1em 0;
-    border-collapse: collapse;
+    gap: 6px;
+    margin-top: 0;
 }
 
 .technologyItem {
-    border: 1px solid #dedede;
-    padding: 1em;
-    border-collapse: collapse;
-    margin-right: 0.3em;
-    border-radius: 3px;
-    font-weight: 600;
-    margin-top: 3px;
-    font-size: 85%;
-}
+    background: #f8f9ff;
+    border: 1px solid #e0e7ff;
+    border-radius: 7px;
+    padding: 0.4em 0.75em;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: background 0.15s, border-color 0.15s, transform 0.15s;
 
-.technologyItem img {
-    width: 26px;
-    height: 26px;
-    margin-right: 0.5em;
-    vertical-align: middle;
-    border-radius: 50%;
-    filter: grayscale(20%);
-}
+    &:hover {
+        background: #eef2ff;
+        border-color: #6366f1;
+        transform: translateY(-1px);
+    }
 
-.technologyName {
-    text-transform: uppercase;
-    color: #757575;
-    font-weight: 600;
-    margin-bottom: -0.8em;
+    img {
+        width: 18px;
+        height: 18px;
+        margin-right: 0.4em;
+        border-radius: 50%;
+    }
 }

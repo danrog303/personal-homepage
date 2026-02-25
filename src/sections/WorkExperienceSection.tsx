@@ -24,7 +24,7 @@ const workExperienceItems = [
                 tags: ["voip", "kubernetes", "c language", "linux", "python"]
             },
             {
-                mainHeading: "Summer Trainee: Software DeveloperInternship",
+                mainHeading: "Summer Trainee: Software Developer Internship",
                 subHeading: "",
                 startDate: "01.07.2023",
                 endDate: "30.09.2023",

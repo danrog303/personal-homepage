@@ -12,8 +12,10 @@ import WorkExperienceSection from "./sections/WorkExperienceSection";
 
 function App() {
     return <div id="home">
-        <MainNavbar />
-        <MainHeader />
+        <div className="heroWrapper">
+            <MainNavbar />
+            <MainHeader />
+        </div>
 
         <main>
             <ProjectPortfolioSection />
