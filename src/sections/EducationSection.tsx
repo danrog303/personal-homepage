@@ -12,7 +12,7 @@ const universityItems = [
                 subHeading: "Field of study: Applied computer science",
                 startDate: "01.03.2025",
                 endDate: "now",
-                description: "Thesis title: TBD"
+                description: "Thesis title: Performance analysis of network packet processing using the DPDK library compared to the standard Linux kernel network stack"
             },
             {
                 mainHeading: "Bachelor's degree",
