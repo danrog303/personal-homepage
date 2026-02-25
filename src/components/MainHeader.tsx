@@ -25,7 +25,7 @@ export default function MainHeader() {
 
                 <a href="#contact" className={styles.headerContactLink}>
                     <FaEnvelope size={16}/>
-                    <span>Get in touch</span>
+                    <span>Contact me</span>
                 </a>
             </div>
         </header>
