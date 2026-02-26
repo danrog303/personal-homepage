@@ -55,7 +55,7 @@ export default function ProjectPage() {
             <Helmet>
                 <title>{project.name} | Daniel Rogowski</title>
                 <meta name="description" content={metaDescription} />
-                <link rel="canonical" href={`${process.env.REACT_APP_SITE_URL}/projects/${project.slug}/`} />
+                <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL}/projects/${project.slug}/`} />
             </Helmet>
             <nav className={styles.topBar}>
                 <Link to="/#private-projects" className={styles.backLink}>

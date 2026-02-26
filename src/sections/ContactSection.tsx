@@ -2,9 +2,9 @@ import {FaEnvelope, FaLinkedin, FaPhone} from "react-icons/fa";
 import React from "react";
 import styles from "./ContactSection.module.scss";
 
-const phoneNumber = process.env.REACT_APP_PHONE || "unavailable";
-const emailAddress = process.env.REACT_APP_EMAIL || "unavailable";
-const linkedInUrl = process.env.REACT_APP_LINKEDIN_URL || "#";
+const phoneNumber = import.meta.env.VITE_PHONE || "unavailable";
+const emailAddress = import.meta.env.VITE_EMAIL || "unavailable";
+const linkedInUrl = import.meta.env.VITE_LINKEDIN_URL || "#";
 
 const contactItems = [
     {

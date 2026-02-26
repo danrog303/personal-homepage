@@ -1,108 +1,111 @@
 import React from 'react';
 import styles from './TechnologiesSection.module.scss';
 
+const technologyImages = import.meta.glob('../assets/technologies/*.webp', { eager: true, import: 'default' }) as Record<string, string>;
+const img = (name: string) => technologyImages[`../assets/technologies/${name}.webp`];
+
 const technologyItems = [
     {
         category: "Web development",
         items: [
-            { name: "HTML", image: require("../assets/technologies/html.webp") },
-            { name: "CSS", image: require("../assets/technologies/css.webp") },
-            { name: "SCSS", image: require("../assets/technologies/scss.webp") },
-            { name: "JavaScript", image: require("../assets/technologies/javascript.webp") },
-            { name: "TypeScript", image: require("../assets/technologies/typescript.webp") },
-            { name: "Plasmo", image: require("../assets/technologies/plasmo.webp") },
-            { name: "Browser extensions", image: require("../assets/technologies/chrome.webp") },
-            { name: "React", image: require("../assets/technologies/react.webp") },
-            { name: "Angular", image: require("../assets/technologies/angular.webp") }
+            { name: "HTML", image: img("html") },
+            { name: "CSS", image: img("css") },
+            { name: "SCSS", image: img("scss") },
+            { name: "JavaScript", image: img("javascript") },
+            { name: "TypeScript", image: img("typescript") },
+            { name: "Plasmo", image: img("plasmo") },
+            { name: "Browser extensions", image: img("chrome") },
+            { name: "React", image: img("react") },
+            { name: "Angular", image: img("angular") }
         ]
     },
     {
         category: "Mobile applications",
         items: [
-            { name: "React Native", image: require("../assets/technologies/react-antive.webp") },
-            { name: "Expo", image: require("../assets/technologies/expo.webp") },
-            { name: "Android development", image: require("../assets/technologies/android.webp") }
+            { name: "React Native", image: img("react-antive") },
+            { name: "Expo", image: img("expo") },
+            { name: "Android development", image: img("android") }
         ]
     },
     {
         category: "Google Marketing",
         items: [
-            { name: "Google Analytics", image: require("../assets/technologies/google.webp") },
-            { name: "Google Search Console", image: require("../assets/technologies/google.webp") },
-            { name: "Google AdSense", image: require("../assets/technologies/google.webp") },
-            { name: "Google AdMob", image: require("../assets/technologies/google.webp") }
+            { name: "Google Analytics", image: img("google") },
+            { name: "Google Search Console", image: img("google") },
+            { name: "Google AdSense", image: img("google") },
+            { name: "Google AdMob", image: img("google") }
         ]
     },
     {
         category: "Languages",
         items: [
-            { name: "Java", image: require("../assets/technologies/java.webp") },
-            { name: "Kotlin", image: require("../assets/technologies/kotlin.webp") },
-            { name: "Python", image: require("../assets/technologies/python.webp") },
-            { name: "Go", image: require("../assets/technologies/golang.webp") },
-            { name: "C", image: require("../assets/technologies/clang.webp") },
-            { name: "C++", image: require("../assets/technologies/c++.webp") }
+            { name: "Java", image: img("java") },
+            { name: "Kotlin", image: img("kotlin") },
+            { name: "Python", image: img("python") },
+            { name: "Go", image: img("golang") },
+            { name: "C", image: img("clang") },
+            { name: "C++", image: img("c++") }
         ]
     },
     {
         category: "Backend libraries and frameworks",
         items: [
-            { name: "Gin", image: require("../assets/technologies/go-gin.webp") },
-            { name: "Flask", image: require("../assets/technologies/flask.webp") },
-            { name: "Spring Boot", image: require("../assets/technologies/spring-boot.webp") }
+            { name: "Gin", image: img("go-gin") },
+            { name: "Flask", image: img("flask") },
+            { name: "Spring Boot", image: img("spring-boot") }
         ]
     },
     {
         category: "Databases",
         items: [
-            { name: "SQL", image: require("../assets/technologies/sql.webp") },
-            { name: "MongoDB", image: require("../assets/technologies/mongodb.webp") },
-            { name: "DynamoDB", image: require("../assets/technologies/dynamodb.webp") }
+            { name: "SQL", image: img("sql") },
+            { name: "MongoDB", image: img("mongodb") },
+            { name: "DynamoDB", image: img("dynamodb") }
         ]
     },
     {
         category: "IMS (IP Multimedia Subsystem)",
         items: [
-            { name: "DPDK", image: require("../assets/technologies/dpdk.webp") },
-            { name: "VoIP technologies", image: require("../assets/technologies/networking.webp") },
-            { name: "SBC", image: require("../assets/technologies/networking.webp") },
-            { name: "Low-level networking", image: require("../assets/technologies/networking.webp") },
-            { name: "Linux networking", image: require("../assets/technologies/linux.webp") },
-            { name: "Network monitoring", image: require("../assets/technologies/networking.webp") }
+            { name: "DPDK", image: img("dpdk") },
+            { name: "VoIP technologies", image: img("networking") },
+            { name: "SBC", image: img("networking") },
+            { name: "Low-level networking", image: img("networking") },
+            { name: "Linux networking", image: img("linux") },
+            { name: "Network monitoring", image: img("networking") }
         ]
     },
     {
         category: "Tools and systems",
         items: [
-            { name: "Git", image: require("../assets/technologies/git.webp") },
-            { name: "Linux", image: require("../assets/technologies/linux.webp") },
-            { name: "Bash", image: require("../assets/technologies/bash.webp") },
-            { name: "Ansible", image: require("../assets/technologies/ansible.webp") },
-            { name: "Docker", image: require("../assets/technologies/docker.webp") },
-            { name: "Podman", image: require("../assets/technologies/podman.webp") },
-            { name: "Grafana", image: require("../assets/technologies/grafana.webp") },
-            { name: "Jenkins", image: require("../assets/technologies/jenkins.webp") },
-            { name: "GitHub", image: require("../assets/technologies/github.webp") },
-            { name: "Gerrit", image: require("../assets/technologies/gerrit.webp") }
+            { name: "Git", image: img("git") },
+            { name: "Linux", image: img("linux") },
+            { name: "Bash", image: img("bash") },
+            { name: "Ansible", image: img("ansible") },
+            { name: "Docker", image: img("docker") },
+            { name: "Podman", image: img("podman") },
+            { name: "Grafana", image: img("grafana") },
+            { name: "Jenkins", image: img("jenkins") },
+            { name: "GitHub", image: img("github") },
+            { name: "Gerrit", image: img("gerrit") }
         ]
     },
     {
         category: "Cloud",
         items: [
-            {name: "Kubernetes", image: require("../assets/technologies/helm.webp")},
-            {name: "Helm", image: require("../assets/technologies/helm.webp")},
-            {name: "AWS Cloud", image: require("../assets/technologies/aws.webp")},
-            {name: "Openshift", image: require("../assets/technologies/openshift.webp")},
-            {name: "Openstack", image: require("../assets/technologies/openstack.webp")},
-            {name: "Cloudflare", image: require("../assets/technologies/cloudflare.webp")},
-            {name: "Terraform", image: require("../assets/technologies/terraform.webp")}
+            {name: "Kubernetes", image: img("helm")},
+            {name: "Helm", image: img("helm")},
+            {name: "AWS Cloud", image: img("aws")},
+            {name: "Openshift", image: img("openshift")},
+            {name: "Openstack", image: img("openstack")},
+            {name: "Cloudflare", image: img("cloudflare")},
+            {name: "Terraform", image: img("terraform")}
         ]
     },
     {
         category: "Test automation",
         items: [
-            { name: "Selenium", image: require("../assets/technologies/selenium.webp") },
-            { name: "Robot Framework", image: require("../assets/technologies/robot-framework.webp") }
+            { name: "Selenium", image: img("selenium") },
+            { name: "Robot Framework", image: img("robot-framework") }
         ]
     }
 ]

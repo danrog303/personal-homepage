@@ -1,11 +1,12 @@
 import React from "react";
 import Timeline from "../components/Timeline";
 import styles from "./EducationSection.module.scss";
+import pbsLogo from "../assets/education/pbs.webp";
 
 const universityItems = [
     {
         name: "Bydgoszcz University of Science and Technology (PBS)",
-        logo: require("../assets/education/pbs.webp"),
+        logo: pbsLogo,
         degrees: [
             {
                 mainHeading: "Master's degree",

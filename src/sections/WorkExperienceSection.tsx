@@ -1,11 +1,12 @@
 import React from "react";
 import Timeline from "../components/Timeline";
 import styles from "./WorkExperienceSection.module.scss";
+import nokiaLogo from "../assets/companies/nokia.webp";
 
 const workExperienceItems = [
     {
         company: "Nokia Solutions and Networks",
-        logo: require("../assets/companies/nokia.webp"),
+        logo: nokiaLogo,
         positions: [
             {
                 mainHeading: "Junior Software Developer",

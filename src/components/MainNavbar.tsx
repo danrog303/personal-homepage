@@ -3,8 +3,8 @@ import React from "react";
 import styles from "./MainNavbar.module.scss";
 
 export default function MainNavbar() {
-    const linkedInUrl = process.env.REACT_APP_LINKEDIN_URL || "#";
-    const githubUrl = process.env.REACT_APP_GITHUB_URL || "#";
+    const linkedInUrl = import.meta.env.VITE_LINKEDIN_URL || "#";
+    const githubUrl = import.meta.env.VITE_GITHUB_URL || "#";
 
     return <>
         <div className={styles.topBar}>

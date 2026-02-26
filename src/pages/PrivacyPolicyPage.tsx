@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
             <Helmet>
                 <title>Privacy Policy | Daniel Rogowski</title>
                 <meta name="description" content="Privacy policy for danielrogowski.net — information about cookies, Google Analytics, and data handling on Daniel Rogowski's portfolio website." />
-                <link rel="canonical" href={`${process.env.REACT_APP_SITE_URL}/privacy-policy/`} />
+                <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL}/privacy-policy/`} />
             </Helmet>
             <nav className={styles.topBar}>
                 <Link to="/" className={styles.backLink}>
@@ -85,8 +85,8 @@ export default function PrivacyPolicyPage() {
                     <h2>6. Contact</h2>
                     <p>
                         For any questions regarding this privacy policy, contact:{" "}
-                        <a href={`mailto:${process.env.REACT_APP_EMAIL}`}>
-                            {process.env.REACT_APP_EMAIL}
+                        <a href={`mailto:${import.meta.env.VITE_EMAIL}`}>
+                            {import.meta.env.VITE_EMAIL}
                         </a>
                         .
                     </p>
