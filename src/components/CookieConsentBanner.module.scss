@@ -1,0 +1,128 @@
+.banner {
+    position: fixed;
+    bottom: 1.75em;
+    right: 1.75em;
+    z-index: 9999;
+    width: 320px;
+    max-width: calc(100vw - 2em);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 1.35em 1.5em 1.5em;
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        0 16px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 1em;
+    animation: slideUp 0.45s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+
+    @media (max-width: 480px) {
+        bottom: 1em;
+        right: 1em;
+        left: 1em;
+        width: auto;
+        max-width: none;
+    }
+}
+
+.banner.hiding {
+    animation: slideDown 0.35s cubic-bezier(0.4, 0, 1, 1) both;
+}
+
+.iconWrapper {
+    flex-shrink: 0;
+    width: 2.5em;
+    height: 2.5em;
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6366f1;
+    margin-top: 0.1em;
+}
+
+.body {
+    flex: 1;
+    min-width: 0;
+}
+
+.title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.4em;
+    letter-spacing: -0.01em;
+}
+
+.description {
+    font-size: 0.775rem;
+    color: #64748b;
+    line-height: 1.65;
+    margin: 0 0 1em;
+}
+
+.policyLink {
+    color: #6366f1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    white-space: nowrap;
+    transition: color 0.15s;
+
+    &:hover {
+        color: #4f46e5;
+        text-decoration: underline;
+    }
+}
+
+.acceptBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #6366f1;
+    border: 1px solid #6366f1;
+    border-radius: 999px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.5em 1.25em;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        background: #4f46e5;
+        border-color: #4f46e5;
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(16px) scale(0.97);
+    }
+}

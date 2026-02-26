@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from '@dr.pogodin/react-helmet';
 import '../App.css';
-import {CookieConsent} from "react-cookie-consent";
+import CookieConsentBanner from "../components/CookieConsentBanner";
 import MainFooter from "../components/MainFooter";
 import ContactSection from "../sections/ContactSection";
 import ProjectPortfolioSection from "../sections/ProjectPortfolioSection";
@@ -33,13 +33,6 @@ export default function HomePage() {
 
         <MainFooter />
 
-        <CookieConsent
-            location="bottom"
-            buttonText="OK, close this message"
-            style={{background: "black"}}
-            buttonStyle={{color: "white", fontWeight: "bold", backgroundColor: "rebeccapurple", fontSize: "13px", borderRadius: "4px"}}>
-            🍪 Want some cookies? {" "}
-            <span style={{fontSize: "90%"}}>This website uses cookies to enhance the user experience.</span>
-        </CookieConsent>
+        <CookieConsentBanner />
     </div>;
 }
