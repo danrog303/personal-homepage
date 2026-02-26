@@ -27,8 +27,8 @@ function getPrerenderedPaths(dir, base = "") {
     const indexFile = path.join(dir, entry.name, "index.html");
     if (fs.existsSync(indexFile)) {
       paths.push(relativePath);
-      paths.push(...getPrerenderedPaths(path.join(dir, entry.name), relativePath));
     }
+    paths.push(...getPrerenderedPaths(path.join(dir, entry.name), relativePath));
   }
 
   return paths;
