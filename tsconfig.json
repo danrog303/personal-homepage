@@ -21,9 +21,12 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "app"
+    "app",
+    ".react-router/types"
   ],
   "references": [
-    { "path": "./tsconfig.node.json" }
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }
