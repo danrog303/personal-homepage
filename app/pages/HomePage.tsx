@@ -1,6 +1,5 @@
 import React from 'react';
 import '../App.css';
-import CookieConsentBanner from "../components/CookieConsentBanner";
 import MainFooter from "../components/MainFooter";
 import ContactSection from "../sections/ContactSection";
 import ProjectPortfolioSection from "../sections/ProjectPortfolioSection";
@@ -26,7 +25,5 @@ export default function HomePage() {
         </main>
 
         <MainFooter />
-
-        <CookieConsentBanner />
     </div>;
 }

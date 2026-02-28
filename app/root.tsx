@@ -7,6 +7,7 @@ import {
     ScrollRestoration,
 } from 'react-router-dom'
 import './index.css'
+import CookieConsentBanner from "./components/CookieConsentBanner";
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -35,6 +36,7 @@ gtag('config', 'G-3GDE5V5JYF');`
                 {children}
                 <ScrollRestoration />
                 <Scripts />
+                <CookieConsentBanner />
             </body>
         </html>
     )
