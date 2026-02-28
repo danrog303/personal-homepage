@@ -26,10 +26,10 @@ export const projectPortfolioItems: ProjectPortfolioItem[] = [
             { type: 'browser', url: "https://danielrogowski.net/", text: "View live" },
             { type: 'github', url: "https://github.com/danrog303/personal-homepage", text: "GitHub repo" }
         ],
-        fullDescription: "A personal portfolio website built as a React + TypeScript SPA, deployed to Cloudflare Pages via GitHub Actions CI/CD. Uses SCSS Modules for theming and react-snap for static pre-rendering of all routes.",
+        fullDescription: "A personal portfolio website built with React Router v7 (framework mode) + TypeScript, deployed to Cloudflare Pages via GitHub Actions CI/CD. Uses SCSS Modules for theming and React Router's built-in pre-rendering for all routes.",
         features: [
             "Single-page scrollable design with anchor-linked sections",
-            "Static pre-rendering via react-snap for fast initial load",
+            "Static pre-rendering via React Router v7 framework mode for fast initial load",
             "GitHub Actions CI/CD pipeline deploying to Cloudflare Pages",
             "SCSS Modules theming with a consistent design language",
             "Project detail subpages at /projects/:slug"
