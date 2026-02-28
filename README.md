@@ -18,4 +18,5 @@ You can find published, live version of this website version at [https://danielr
    ```
 
 ## 🖼️ Screenshots
-<img width="600" border="1" alt="Example screenshot 1" src="https://github.com/user-attachments/assets/3cbe8cf0-186c-44fa-8cf8-745f9b7066c6" />
+<img width="500" border="1" alt="Zrzut ekranu 2026-02-28 154250" src="https://github.com/user-attachments/assets/63c1e8d4-c5dd-4ff6-ae29-a595f8c80253" />
+<img width="500" border="1" alt="Zrzut ekranu 2026-02-28 154613" src="https://github.com/user-attachments/assets/fd430b7e-ca80-468f-8e4f-a78f838f8f88" />
