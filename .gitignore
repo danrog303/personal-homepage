@@ -20,6 +20,7 @@
 # ai stuff
 .claude
 CLAUDE.md
+.playwright-mcp/
 
 # misc
 .DS_Store

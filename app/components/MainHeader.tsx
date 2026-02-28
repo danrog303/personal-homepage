@@ -7,7 +7,7 @@ export default function MainHeader() {
     return <>
         <header className={styles.header}>
             <div className={styles.headerImageWrapper}>
-                <img src={programmingImage} alt={"Programming illustration"} fetchPriority="high" />
+                <img src={programmingImage} alt={"Programming illustration"} fetchPriority="high" width="1024" height="683" />
             </div>
 
             <div className={styles.headerContent}>

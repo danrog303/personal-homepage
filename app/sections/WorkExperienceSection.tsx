@@ -11,7 +11,7 @@ export default function WorkExperienceSection() {
             {workExperienceItems.map(workExperienceItem => (
                 <div className={styles.workExperienceCard} key={workExperienceItem.company}>
                     <div className={styles.companyName}>
-                        <img src={workExperienceItem.logo} alt={`Logo of ${workExperienceItem.company}`} />
+                        <img src={workExperienceItem.logo} alt={`Logo of ${workExperienceItem.company}`} width="100" height="100" />
                         <h3>{workExperienceItem.company}</h3>
                     </div>
 

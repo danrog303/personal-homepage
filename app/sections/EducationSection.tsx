@@ -11,7 +11,7 @@ export default function EducationSection() {
             {universityItems.map(universityItem =>
                 <div className={styles.universityCard} key={universityItem.name}>
                     <div className={styles.universityName}>
-                        <img src={universityItem.logo} alt={`Logo of ${universityItem.name}`}/>
+                        <img src={universityItem.logo} alt={`Logo of ${universityItem.name}`} width="99" height="99" />
                         <h3>Bydgoszcz University of Science and Technology (PBS)</h3>
                     </div>
 

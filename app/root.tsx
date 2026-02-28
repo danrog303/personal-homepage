@@ -6,6 +6,7 @@ import {
     Scripts,
     ScrollRestoration,
 } from 'react-router-dom'
+import '@fontsource-variable/inter'
 import './index.css'
 import CookieConsentBanner from "./components/CookieConsentBanner";
 
