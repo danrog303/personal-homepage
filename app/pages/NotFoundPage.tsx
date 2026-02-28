@@ -1,16 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "@dr.pogodin/react-helmet";
 import { FaArrowLeft, FaHome } from "react-icons/fa";
 import styles from "./NotFoundPage.module.scss";
 
 export default function NotFoundPage() {
     return (
         <div className={styles.page}>
-            <Helmet>
-                <title>404 – Page Not Found | Daniel Rogowski</title>
-                <meta name="robots" content="noindex" />
-            </Helmet>
             <nav className={styles.topBar}>
                 <Link to="/" className={styles.backLink}>
                     <FaArrowLeft /> Back to homepage

@@ -1,28 +1,6 @@
-import {FaEnvelope, FaLinkedin, FaPhone} from "react-icons/fa";
 import React from "react";
 import styles from "./ContactSection.module.scss";
-
-const phoneNumber = import.meta.env.VITE_PHONE || "unavailable";
-const emailAddress = import.meta.env.VITE_EMAIL || "unavailable";
-const linkedInUrl = import.meta.env.VITE_LINKEDIN_URL || "#";
-
-const contactItems = [
-    {
-        name: "E-mail",
-        icon: <FaEnvelope />,
-        value: <p><a href={`mailto:${emailAddress}`}>{emailAddress}</a></p>
-    },
-    {
-        name: "Phone number",
-        icon: <FaPhone />,
-        value: <p>{phoneNumber}</p>
-    },
-    {
-        name: "LinkedIn",
-        icon: <FaLinkedin />,
-        value: <p><a href={linkedInUrl} target="_blank" rel="noreferrer">Daniel Rogowski</a></p>
-    }
-]
+import { contactItems } from "../data/contactData";
 
 export default function ContactSection() {
     return <>

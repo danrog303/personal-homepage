@@ -1,8 +1,7 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Helmet } from '@dr.pogodin/react-helmet';
+import { useLoaderData, Link } from 'react-router-dom';
 import { FaChrome, FaDownload, FaGithub, FaGooglePlay, FaLink, FaArrowLeft } from 'react-icons/fa';
-import { projectPortfolioItems, ProjectLink } from '../data/projectPortfolioData';
+import { ProjectPortfolioItem, ProjectLink } from '../data/projectPortfolioData';
 import styles from './ProjectPage.module.scss';
 
 function getLinkIcon(type: ProjectLink['type']) {
@@ -25,9 +24,10 @@ function getLinkClass(type: ProjectLink['type']) {
     }
 }
 
+type LoaderData = { project: ProjectPortfolioItem | null }
+
 export default function ProjectPage() {
-    const { slug } = useParams<{ slug: string }>();
-    const project = projectPortfolioItems.find(p => p.slug === slug);
+    const { project } = useLoaderData() as LoaderData;
 
     if (!project) {
         return (
@@ -39,7 +39,6 @@ export default function ProjectPage() {
                 </nav>
                 <div className={styles.content}>
                     <h1 className={styles.notFound}>Project not found</h1>
-                    <p className={styles.notFoundDesc}>No project with slug "{slug}" exists.</p>
                     <Link to="/#private-projects" className={`${styles.btn} ${styles.btnBrowser}`}>
                         <FaArrowLeft /> <span>Go back to portfolio</span>
                     </Link>
@@ -48,15 +47,8 @@ export default function ProjectPage() {
         );
     }
 
-    const metaDescription = (project.fullDescription || project.description).slice(0, 155);
-
     return (
         <div className={styles.page}>
-            <Helmet>
-                <title>{project.name} | Daniel Rogowski</title>
-                <meta name="description" content={metaDescription} />
-                <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL}/projects/${project.slug}/`} />
-            </Helmet>
             <nav className={styles.topBar}>
                 <Link to="/#private-projects" className={styles.backLink}>
                     <FaArrowLeft /> Back to portfolio

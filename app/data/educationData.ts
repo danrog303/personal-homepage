@@ -1,9 +1,13 @@
-import React from "react";
-import Timeline from "../components/Timeline";
-import styles from "./EducationSection.module.scss";
 import pbsLogo from "../assets/education/pbs.webp";
+import { TimelineItem } from "../components/Timeline";
 
-const universityItems = [
+export interface UniversityItem {
+    name: string;
+    logo: string;
+    degrees: TimelineItem[];
+}
+
+export const universityItems: UniversityItem[] = [
     {
         name: "Bydgoszcz University of Science and Technology (PBS)",
         logo: pbsLogo,
@@ -24,23 +28,4 @@ const universityItems = [
             }
         ]
     }
-]
-
-export default function EducationSection() {
-    return <>
-        <section id="education">
-            <h2>Education</h2>
-
-            {universityItems.map(universityItem =>
-                <div className={styles.universityCard} key={universityItem.name}>
-                    <div className={styles.universityName}>
-                        <img src={universityItem.logo} alt={`Logo of ${universityItem.name}`}/>
-                        <h3>Bydgoszcz University of Science and Technology (PBS)</h3>
-                    </div>
-
-                    <Timeline items={universityItem.degrees} />
-                </div>
-            )}
-        </section>
-    </>;
-}
+];

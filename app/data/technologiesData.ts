@@ -1,10 +1,17 @@
-import React from 'react';
-import styles from './TechnologiesSection.module.scss';
-
 const technologyImages = import.meta.glob('../assets/technologies/*.webp', { eager: true, import: 'default' }) as Record<string, string>;
 const img = (name: string) => technologyImages[`../assets/technologies/${name}.webp`];
 
-const technologyItems = [
+export interface TechnologyItem {
+    name: string;
+    image: string;
+}
+
+export interface TechnologyCategory {
+    category: string;
+    items: TechnologyItem[];
+}
+
+export const technologyItems: TechnologyCategory[] = [
     {
         category: "Web development",
         items: [
@@ -92,13 +99,13 @@ const technologyItems = [
     {
         category: "Cloud",
         items: [
-            {name: "Kubernetes", image: img("helm")},
-            {name: "Helm", image: img("helm")},
-            {name: "AWS Cloud", image: img("aws")},
-            {name: "Openshift", image: img("openshift")},
-            {name: "Openstack", image: img("openstack")},
-            {name: "Cloudflare", image: img("cloudflare")},
-            {name: "Terraform", image: img("terraform")}
+            { name: "Kubernetes", image: img("helm") },
+            { name: "Helm", image: img("helm") },
+            { name: "AWS Cloud", image: img("aws") },
+            { name: "Openshift", image: img("openshift") },
+            { name: "Openstack", image: img("openstack") },
+            { name: "Cloudflare", image: img("cloudflare") },
+            { name: "Terraform", image: img("terraform") }
         ]
     },
     {
@@ -108,26 +115,4 @@ const technologyItems = [
             { name: "Robot Framework", image: img("robot-framework") }
         ]
     }
-]
-
-export default function TechnologiesSection() {
-    return <>
-        <section id="technologies">
-            <h2>Technologies</h2>
-            <div className={styles.technologyCard}>
-                {technologyItems.map(technologyCategoryItem => <div className={styles.techology} key={technologyCategoryItem.category.toString()}>
-                    <div className={styles.technologyName}>{technologyCategoryItem.category}</div>
-                    <div className={styles.technologyItems}>
-                        {technologyCategoryItem.items.map(technologyItem => (
-                            <div className={styles.technologyItem} key={technologyItem.name}>
-                                <img src={technologyItem.image} alt={`${technologyItem.name} logo`} loading="lazy" fetchPriority="low" />
-                                {technologyItem.name}
-                            </div>
-                        ))}
-                    </div>
-                </div>)}
-            </div>
-        </section>
-    </>
-;
-}
+];

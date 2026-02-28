@@ -14,7 +14,7 @@ if (fs.existsSync(envPath)) {
 }
 
 const BASE_URL = process.env.VITE_SITE_URL || "https://danielrogowski.net";
-const BUILD_DIR = path.join(__dirname, "..", "build");
+const BUILD_DIR = path.join(__dirname, "..", "build", "client");
 const OUTPUT_PATH = path.join(BUILD_DIR, "sitemap.xml");
 
 function getPrerenderedPaths(dir, base = "") {
@@ -42,7 +42,9 @@ function buildSitemap(urls) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlEntries}\n</urlset>\n`;
 }
 
-const subPaths = getPrerenderedPaths(BUILD_DIR);
+const EXCLUDED_PATHS = new Set(["/404"]);
+
+const subPaths = getPrerenderedPaths(BUILD_DIR).filter((p) => !EXCLUDED_PATHS.has(p));
 
 const urls = [
   { loc: `${BASE_URL}/`, priority: "1.0" },

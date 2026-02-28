@@ -1,17 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "@dr.pogodin/react-helmet";
 import { FaArrowLeft } from "react-icons/fa";
 import styles from "./PrivacyPolicyPage.module.scss";
 
 export default function PrivacyPolicyPage() {
     return (
         <div className={styles.page}>
-            <Helmet>
-                <title>Privacy Policy | Daniel Rogowski</title>
-                <meta name="description" content="Privacy policy for danielrogowski.net — information about cookies, Google Analytics, and data handling on Daniel Rogowski's portfolio website." />
-                <link rel="canonical" href={`${import.meta.env.VITE_SITE_URL}/privacy-policy/`} />
-            </Helmet>
             <nav className={styles.topBar}>
                 <Link to="/" className={styles.backLink}>
                     <FaArrowLeft /> Back to homepage
