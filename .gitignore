@@ -14,6 +14,9 @@
 # idea
 /.idea
 
+# vsc
+/.vscode
+
 # ai stuff
 .claude
 CLAUDE.md
