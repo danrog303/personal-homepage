@@ -59,6 +59,7 @@ export const projectPortfolioItems: ProjectPortfolioItem[] = [
         description: "Android game for playing party games with friends.",
         tags: ["react native", "expo", "android", "admob"],
         links: [
+            { type: 'browser', url: "https://derupartygames.danielrogowski.net/", text: "Project website" },
             { type: 'playstore', url: "https://play.google.com/store/apps/details?id=com.github.danrog303.partygames.free", text: "Android Play Store" },
             { type: 'github', url: "https://github.com/danrog303/party-games", text: "GitHub repo" }
         ],
