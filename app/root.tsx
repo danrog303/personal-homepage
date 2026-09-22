@@ -21,6 +21,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <meta property="og:url" content="https://danielrogowski.net" />
                 <meta property="og:image" content="/logo192.png" />
                 <meta name="google-adsense-account" content="ca-pub-3205845208748946" />
+                <meta name="facebook-domain-verification" content="iistn46yg2x7knyweuk925thvzmcv8" />
                 <link rel="apple-touch-icon" href="/logo192.png" />
                 <link rel="icon" href="/favicon.ico" />
                 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GDE5V5JYF"></script>
