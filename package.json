@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
-    "@react-router/node": "^7.13.1",
+    "@react-router/node": "^8.0.0",
     "@types/node": "^26.0.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -19,7 +19,7 @@
     "web-vitals": "^6.0.0"
   },
   "devDependencies": {
-    "@react-router/dev": "^7.13.1"
+    "@react-router/dev": "^8.0.0"
   },
   "scripts": {
     "start": "react-router dev",
