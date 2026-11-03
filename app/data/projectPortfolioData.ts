@@ -36,21 +36,37 @@ export const projectPortfolioItems: ProjectPortfolioItem[] = [
         ]
     },
     {
-        name: "TestPortal GPT",
-        slug: "testportal-gpt",
-        description: "AI-powered browser plugin for automatic test solving.",
-        tags: ["plasmo", "react", "browser extension", "openai"],
+        name: "Luzak",
+        slug: "luzak",
+        description: "AI-powered browser extension for Testportal and Moodle quizzes.",
+        tags: ["browser extension", "ai", "testportal", "moodle"],
         links: [
-            { type: 'chrome', url: "https://chromewebstore.google.com/detail/testportal-gpt/cfebdnpaooilklaiemggkhnbakafohel", text: "Download" },
-            { type: 'github', url: "https://github.com/danrog303/testportal-gpt", text: "GitHub repo" }
+            { type: 'browser', url: "https://luzak.top/", text: "Project website" },
+            { type: 'chrome', url: "https://chromewebstore.google.com/detail/fefmjekdgmjjilpbcoanmnegmakjpcom", text: "Chrome Web Store" }
         ],
-        fullDescription: "A browser extension that uses OpenAI's ChatGPT API to auto-solve questions on TestPortal.net. Built with the Plasmo cross-browser framework. Supports open, single-choice, multi-choice, and image-based questions.",
+        fullDescription: "A Chrome extension that provides AI assistance for quizzes on Testportal and Moodle, where AI assistance is allowed.",
         features: [
-            "Auto-solve button injected into TestPortal pages",
-            "GPT-4o / GPT-3.5-turbo model support",
-            "Multi-type question support (open, single, multiple choice, images)",
-            "Stealth mode and configurable OpenAI context",
-            "Anti-TestPortal \"honest respondent\" bypass"
+            "Automatic answers and text-based AI hints",
+            "Support for Testportal and Moodle",
+            "Configurable button visibility",
+            "Additional context from text and uploaded notes"
+        ]
+    },
+    {
+        name: "Cardmarket Currency Converter",
+        slug: "cm-currency-converter",
+        description: "Browser extension for converting Cardmarket prices to your chosen currency.",
+        tags: ["typescript", "plasmo", "browser extension", "aws"],
+        links: [
+            { type: 'chrome', url: "https://chromewebstore.google.com/detail/cardmarket-currency-conve/canfideoigpoaajnmkamhnicogbealop", text: "Chrome Web Store" },
+            { type: 'github', url: "https://github.com/danrog303/cm-currency-converter", text: "GitHub repo" }
+        ],
+        fullDescription: "A Chrome extension that converts Cardmarket item prices into a chosen currency. Built with Plasmo and backed by an AWS Lambda API that retrieves exchange rates and caches them in DynamoDB.",
+        features: [
+            "Automatic price conversion on Cardmarket pages",
+            "Configurable target currency and display symbol",
+            "Currency preferences synced through Chrome storage",
+            "Exchange-rate caching with AWS Lambda and DynamoDB"
         ]
     },
     {
@@ -68,76 +84,6 @@ export const projectPortfolioItems: ProjectPortfolioItem[] = [
             "Multiple party game modes",
             "AdMob monetized",
             "Cross-platform mobile build via React Native and Expo"
-        ]
-    },
-    {
-        name: "Ebook Wizard",
-        slug: "ebook-wizard",
-        description: "My engineering thesis! Network drive for e-book creation and management.",
-        tags: ["java", "spring boot", "aws", "mongodb", "angular"],
-        links: [
-            { type: 'github', url: "https://github.com/danrog303/ebook-wizard", text: "GitHub repo" }
-        ],
-        fullDescription: "Engineering thesis project. A cloud drive for e-books — upload, convert between formats, edit metadata, read online, and share with other users. Includes an interactive online ebook editor.",
-        features: [
-            "Multi-format conversion (epub, mobi, azw3, html, pdf, docx, txt) via Pandoc/Calibre",
-            "Online ebook editor and viewer",
-            "Metadata editing and e-book sharing between users",
-            "AWS-native architecture (S3, SQS, SES, Cognito)",
-            "Angular Material frontend secured with OAuth2"
-        ]
-    },
-    {
-        name: "Shelfspace",
-        slug: "shelfspace",
-        description: "Website for tracking games and movies on your shelves.",
-        tags: ["aws", "dynamodb", "java", "spring boot"],
-        links: [
-            { type: 'browser', url: "https://shelfspace.danielrogowski.net", text: "View live" },
-            { type: 'github', url: "https://github.com/danrog303/shelfspace-api", text: "GitHub repo" }
-        ],
-        fullDescription: "A serverless web application for tracking games, movies, and books on virtual shelves. Users organize their collection, assign statuses and ratings, and manage everything through a REST API backed by AWS Lambda and DynamoDB.",
-        features: [
-            "Shelves for games, movies, and books",
-            "Status and rating labels for collection items",
-            "Serverless AWS Lambda runtime with DynamoDB storage",
-            "Amazon Cognito authentication",
-            "Swagger API documentation"
-        ]
-    },
-    {
-        name: "Poketch",
-        slug: "poketch",
-        description: "Pokemon game tracking application.",
-        tags: ["spring boot", "java", "mysql", "docker"],
-        links: [
-            { type: 'github', url: "https://github.com/danrog303/poketch", text: "GitHub repo" }
-        ],
-        fullDescription: "A Spring Boot web application for tracking Living Pokédex progress. Helps Pokémon fans record which Pokémon they own across game titles, calculate PC box positions, and view collection statistics.",
-        features: [
-            "Living Pokédex tracker across multiple game titles",
-            "PC Box position calculator",
-            "Collection statistics page",
-            "Multi-user authentication with email confirmation flow",
-            "ReCAPTCHA protection and Docker Compose setup"
-        ]
-    },
-    {
-        name: "Epubify",
-        slug: "epubify",
-        description: "Java library for creating e-book files, used in Ebook Wizard.",
-        tags: ["java", "epub", "ebook"],
-        links: [
-            { type: 'download', url: "https://github.com/danrog303/epubify/packages/2203789", text: "Download" },
-            { type: 'github', url: "https://github.com/danrog303/epubify", text: "GitHub repo" }
-        ],
-        fullDescription: "A Java library (distributed via GitHub Packages) for programmatically generating EPUB files. Built as a foundation for the Ebook Wizard project. Provides a clean, modular API for writing metadata, chapters, images, and cover art.",
-        features: [
-            "Metadata support (title, author, description)",
-            "Cover image from file or URL",
-            "Multi-chapter support with auto-generated table of contents",
-            "Embedded images within chapters",
-            "Configurable paragraph formatting (indents and spacing)"
         ]
     },
     {

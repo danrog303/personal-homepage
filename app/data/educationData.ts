@@ -15,8 +15,8 @@ export const universityItems: UniversityItem[] = [
             {
                 mainHeading: "Master's degree",
                 subHeading: "Field of study: Applied computer science",
-                startDate: "01.03.2025",
-                endDate: "now",
+                startDate: "14.09.2026",
+                endDate: "01",
                 description: "Thesis title: Performance analysis of network packet processing using the DPDK library compared to the standard Linux kernel network stack"
             },
             {

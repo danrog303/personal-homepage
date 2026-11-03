@@ -13,10 +13,18 @@ export const workExperienceItems: WorkExperienceItem[] = [
         logo: nokiaLogo,
         positions: [
             {
+                mainHeading: "Software Developer",
+                subHeading: "",
+                startDate: "01.07.2026",
+                endDate: "now",
+                description: "Work on a Nokia Session Border Controller (SBC) product.",
+                tags: ["golang", "voip", "kubernetes", "c language", "linux", "python"]
+            },
+            {
                 mainHeading: "Junior Software Developer",
                 subHeading: "",
                 startDate: "01.07.2024",
-                endDate: "now",
+                endDate: "30.06.2026",
                 description: "Work on a Nokia Session Border Controller (SBC) product.",
                 tags: ["golang", "voip", "kubernetes", "c language", "linux", "python"]
             },
