@@ -1,4 +1,4 @@
-import type { MetaFunction } from 'react-router-dom'
+import type { MetaFunction } from 'react-router'
 import PrivacyPolicyPage from '../pages/PrivacyPolicyPage'
 
 export const meta: MetaFunction = () => [

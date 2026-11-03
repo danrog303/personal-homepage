@@ -1,4 +1,4 @@
-import type { MetaFunction, LoaderFunctionArgs } from 'react-router-dom'
+import type { MetaFunction, LoaderFunctionArgs } from 'react-router'
 import { projectPortfolioItems } from '../data/projectPortfolioData'
 import ProjectPage from '../pages/ProjectPage'
 import NotFoundPage from '../pages/NotFoundPage'
@@ -9,8 +9,8 @@ export async function loader({ params }: LoaderFunctionArgs) {
     return { project }
 }
 
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
-    const project = data?.project
+export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
+    const project = loaderData?.project
     if (!project) {
         return [{ title: 'Project not found | Daniel Rogowski' }]
     }

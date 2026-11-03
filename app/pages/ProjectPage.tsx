@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData, Link } from 'react-router-dom';
+import { useLoaderData, Link } from 'react-router';
 import { FaChrome, FaDownload, FaGithub, FaGooglePlay, FaLink, FaArrowLeft } from 'react-icons/fa';
 import { ProjectPortfolioItem, ProjectLink } from '../data/projectPortfolioData';
 import styles from './ProjectPage.module.scss';

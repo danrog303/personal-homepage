@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { FaArrowLeft, FaHome } from "react-icons/fa";
 import styles from "./NotFoundPage.module.scss";
 

@@ -1,4 +1,4 @@
-import type { MetaFunction } from 'react-router-dom'
+import type { MetaFunction } from 'react-router'
 import NotFoundPage from '../pages/NotFoundPage'
 
 export const meta: MetaFunction = () => [

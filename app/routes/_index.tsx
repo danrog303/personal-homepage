@@ -1,4 +1,4 @@
-import type { MetaFunction } from 'react-router-dom'
+import type { MetaFunction } from 'react-router'
 import HomePage from '../pages/HomePage'
 
 export const meta: MetaFunction = () => [

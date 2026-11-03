@@ -1,6 +1,6 @@
 import { FaChrome, FaDownload, FaGithub, FaGooglePlay, FaLink } from "react-icons/fa";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import styles from "./ProjectPortfolioSection.module.scss";
 import { projectPortfolioItems, ProjectLink } from "../data/projectPortfolioData";
 
