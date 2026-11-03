@@ -11,7 +11,6 @@ export default function MainHeader() {
             </div>
 
             <div className={styles.headerContent}>
-                <span className={styles.headerRole}>Software Engineer</span>
                 <h1>Daniel Rogowski</h1>
 
                 <div className={styles.headerParagraphs}>
