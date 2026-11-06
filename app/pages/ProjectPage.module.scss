@@ -209,17 +209,11 @@
     }
 }
 
-.linksHeading {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin: 0 0 0.75em;
-}
-
 .links {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-bottom: 2em;
 }
 
 .btn {

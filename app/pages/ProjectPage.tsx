@@ -158,17 +158,6 @@ export default function ProjectPage() {
                     </div>
                 )}
 
-                {details?.intro.map((paragraph, idx) => (
-                    <p key={idx} className={styles.intro}>{paragraph}</p>
-                ))}
-
-                <TableOfContents sections={sections} />
-
-                {sections.map(section => (
-                    <SectionContent key={section.heading} section={section} level={2} />
-                ))}
-
-                <h2 className={styles.linksHeading}>Check the project out</h2>
                 <div className={styles.links}>
                     {project.links.map(link => (
                         <a
@@ -183,6 +172,16 @@ export default function ProjectPage() {
                         </a>
                     ))}
                 </div>
+
+                {details?.intro.map((paragraph, idx) => (
+                    <p key={idx} className={styles.intro}>{paragraph}</p>
+                ))}
+
+                <TableOfContents sections={sections} />
+
+                {sections.map(section => (
+                    <SectionContent key={section.heading} section={section} level={2} />
+                ))}
             </main>
         </div>
     );
