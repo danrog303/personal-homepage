@@ -70,8 +70,8 @@ export const cmCurrencyConverterDetails: ProjectDetails = {
                 },
             ],
             images: [
-                { src: demoBefore, alt: "Demo offer table with prices in euros", caption: "Before: a demo offer table with euro prices (a simplified mock-up, not the real Cardmarket page).", width: 640, height: 404, variant: 'narrow' },
-                { src: demoAfter, alt: "The same demo offer table with prices converted to Polish złoty", caption: "After: the extension has converted every price to złoty using the live exchange rate.", width: 640, height: 404, variant: 'narrow' },
+                { src: demoBefore, alt: "Demo offer table with prices in euros", caption: "Before: a demo offer table with euro prices (a simplified mock-up, not the real Cardmarket page).", width: 640, height: 404, variant: 'wide' },
+                { src: demoAfter, alt: "The same demo offer table with prices converted to Polish złoty", caption: "After: the extension has converted every price to złoty using the live exchange rate.", width: 640, height: 404, variant: 'wide' },
             ],
         },
         {

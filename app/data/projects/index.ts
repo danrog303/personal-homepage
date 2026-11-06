@@ -3,6 +3,7 @@ import { personalHomepageDetails } from './personalHomepage';
 import { cmCurrencyConverterDetails } from './cmCurrencyConverter';
 import { mayaCalculatorDetails } from './mayaCalculator';
 import { luzakDetails } from './luzak';
+import { deruPartyGamesDetails } from './deruPartyGames';
 
 /**
  * Detailed descriptions of projects, keyed by the slug used in projectPortfolioData.ts.
@@ -13,5 +14,6 @@ export const projectDetailsBySlug: Record<string, ProjectDetails> = {
     'personal-homepage': personalHomepageDetails,
     'luzak': luzakDetails,
     'cm-currency-converter': cmCurrencyConverterDetails,
+    'deru-party-games': deruPartyGamesDetails,
     'maya-calculator': mayaCalculatorDetails,
 };

@@ -48,7 +48,7 @@ export const projectPortfolioItems: ProjectPortfolioItem[] = [
     {
         name: "Deru Party Games",
         slug: "deru-party-games",
-        description: "Android game for playing party games with friends.",
+        description: "Android app with five party card games, available in six languages.",
         tags: ["react native", "expo", "android", "admob"],
         links: [
             { type: 'browser', url: "https://derupartygames.danielrogowski.net/", text: "Project website" },

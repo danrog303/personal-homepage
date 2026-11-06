@@ -57,7 +57,7 @@ function SectionImages({ images }: { images?: ProjectImage[] }) {
     const narrowImages = images.filter(image => image.variant === 'narrow');
 
     const renderFigure = (image: ProjectImage) => (
-        <figure key={image.src} className={styles.figure}>
+        <figure key={image.src} className={styles.figure} style={{ maxWidth: image.width }}>
             <a href={image.src} target="_blank" rel="noreferrer">
                 <img
                     src={image.src}
@@ -86,10 +86,10 @@ function SectionContent({ section, level }: { section: ProjectSection; level: 2 
             <Heading>{section.heading}</Heading>
             {section.paragraphs?.map((paragraph, idx) => <p key={idx}>{paragraph}</p>)}
             <SectionList section={section} />
-            <SectionImages images={section.images} />
             {section.subsections?.map(subsection => (
                 <SectionContent key={subsection.heading} section={subsection} level={3} />
             ))}
+            <SectionImages images={section.images} />
         </section>
     );
 }
