@@ -59,8 +59,8 @@ export const projectPortfolioItems: ProjectPortfolioItem[] = [
     {
         name: "Maya Calculator",
         slug: "maya-calculator",
-        description: "Calculator for converting between arabic and mayan numerical system.",
-        tags: ["html", "css", "javascript"],
+        description: "Educational web tool that converts decimal numbers into Maya numerals.",
+        tags: ["react", "typescript", "material ui", "cloudflare"],
         links: [
             { type: 'browser', url: "https://mayacalc.danielrogowski.net/", text: "View live" },
             { type: 'github', url: "https://github.com/danrog303/mayan-calculator", text: "GitHub repo" }
